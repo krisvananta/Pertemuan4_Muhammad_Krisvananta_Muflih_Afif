@@ -1,11 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <h2>form di HTML</h2>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Need For Speed MostWanted</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            /* background-color: #f3f3f3; */
+            background-image: url(https://cdn.cloudflare.steamstatic.com/steam/apps/1262560/ss_4292ba4d468883bb13c619330229047f9ab197f7.jpg?t=1605151411);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #ffffffdf;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 320px;
+            max-width: 90%;
+        }
+        h1, h3 {
+            color: #333;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            color: #666;
+        }
+        input[type="text"],
+        input[type="date"],
+        select {
+            width: calc(100% - 12px);
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: transparent url('arrow.png') no-repeat right center;
+            background-size: 16px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <form action="" method="post">
-        <input type="text">
-    </form>
+    <div class="container">
+        <h1>Welcome to 
+            <br>Need For Speed 
+            <br>MostWanted!</h1>
+        <h3>Here's your starting point to gain your reputation</h3>
+        <form action="/Pertemuan3_Muhammad Krisvananta Muflih Afif/showroom page.html" method="post">
+            <label for="fname">Your first name:</label>
+            <input type="text" id="fname" name="fname" required>
+            <label for="lname">Your last name:</label>
+            <input type="text" id="lname" name="lname" required>
+            <label for="bday">Your birthday:</label>
+            <input type="date" id="bday" name="bday" required>
+            <label for="rides">Pick a role:</label>
+            <select name="rides" id="rides" required>
+                <option value="">NPC</option>
+                <option value="Cop">Bad Cop</option>
+                <option value="Bad guy">Bad guy</option>
+            </select>
+            <input type="submit" value="Get me to the showroom!">
+        </form>
+    </div>
 </body>
 </html>
